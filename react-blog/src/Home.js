@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 
 const Home = () => {
 
-    // fetches data from JSON server, run 'npx json-server --watch data/db.json --port 8000' to start server
+    // fetches blog data from JSON server, run 'npx json-server --watch data/db.json --port 8000' to start server
     const { data: blogs, isLoading, error } = useFetch('http://localhost:8000/blogs');
 
   return (
