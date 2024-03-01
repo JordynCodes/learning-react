@@ -11,7 +11,8 @@ const Home = () => {
       { error && <div>{error}</div> }
       { isLoading && <div>Loading...</div> }
       { blogs && <BlogList blogs={blogs}/> }
-      { blogs && <BlogList blogs={blogs.filter(blog => blog.author === 'mario')} title="Mario's Blogs"/> }
+      { (!blogs || blogs.length === 0) && <h2>There are currently no blogs.</h2> }
+      {console.log(blogs)}
     </div>
   );
 }
